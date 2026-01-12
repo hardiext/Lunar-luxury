@@ -26,7 +26,7 @@ const services = [
 export function ServicesSection() {
   return (
     <section className="py-32 lg:py-48 bg-black text-white">
-      <div className="max-w-450 mx-auto px-8 lg:px-16">
+      <div className="lg:max-w-450 mx-auto px-8 lg:px-16">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
       
           <motion.div

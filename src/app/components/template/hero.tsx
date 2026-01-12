@@ -5,16 +5,16 @@ import { useEffect, useRef, useState } from "react";
 import { ImageWithFallback } from "../molecules/fallback";
 
 function useIsMobile(breakpoint = 768) {
-  const [isMobile, setIsMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < breakpoint);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, [breakpoint]);
+    useEffect(() => {
+        const check = () => setIsMobile(window.innerWidth < breakpoint);
+        check();
+        window.addEventListener("resize", check);
+        return () => window.removeEventListener("resize", check);
+    }, [breakpoint]);
 
-  return isMobile;
+    return isMobile;
 }
 
 function Counter({
@@ -72,22 +72,22 @@ export function HeroSection() {
 
 
     const data = [
-  {
-    value: isMobile ? 12 : 47,
-    label: "CLIENTS",
-    suffix: "K+",
-  },
-  {
-    value: isMobile ? 120 : 250,
-    label: "PIECES",
-    suffix: "+",
-  },
-  {
-    value: isMobile ? 95 : 98,
-    label: "SATISFACTION",
-    suffix: "%",
-  },
-];
+        {
+            value: isMobile ? 12 : 47,
+            label: "CLIENTS",
+            suffix: "K+",
+        },
+        {
+            value: isMobile ? 120 : 250,
+            label: "PIECES",
+            suffix: "+",
+        },
+        {
+            value: isMobile ? 95 : 98,
+            label: "SATISFACTION",
+            suffix: "%",
+        },
+    ];
 
 
     const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
@@ -133,13 +133,13 @@ export function HeroSection() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.5 }}
-                            className="text-[18px] leading-[1.8] text-black/50 max-w-md mb-16"
+                            className="text-[18px] leading-[1.8] text-black/50 lg:max-w-md max-w-sm mb-16"
                         >
                             Kurasi eksklusif dari koleksi terbatas yang menggabungkan
                             keahlian tradisional dengan estetika kontemporer.
                         </motion.p>
 
-                   
+
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -176,11 +176,12 @@ export function HeroSection() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.8, delay: 0.8 }}
-                            className="flex items-center gap-16 mt-24 pt-8 border-t border-black/10"
+                            className="flex items-center lg:gap-16 gap-8 mt-24 pt-8 border-t border-black/10"
                         >
                             {data.map((item, i) => (
                                 <div key={i}>
-                                    <div className="lg:text-[32px] text-[24px] tracking-[-0.02em] text-black mb-1">
+                                    <div className="text-[22px] lg:text-[32px] tracking-[-0.01em] lg:tracking-[-0.02em] text-black mb-1 flex-wrap">
+
                                         <Counter
                                             target={item.value}
                                             suffix={item.suffix}
@@ -197,9 +198,9 @@ export function HeroSection() {
 
                     </motion.div>
 
-                   
+
                     <motion.div
-                        className="lg:col-span-7 relative h-[70vh] lg:h-[85vh]"
+                        className="lg:col-span-7 relative h-[70vh] lg:h-[85vh] max-w-full overflow-hidden"
                         style={{ y }}
                     >
                         <motion.div
@@ -216,13 +217,20 @@ export function HeroSection() {
                                 />
                             </div>
 
-                            {/* Floating Info Card */}
+
                             <motion.div
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.8, delay: 1.2 }}
-                                className="absolute bottom-12 left-0 lg:left-12 bg-white p-8 max-w-xs"
+                                className="
+    absolute bottom-6
+    left-1/2 -translate-x-1/2
+    lg:left-12 lg:translate-x-0
+    bg-white p-6 lg:p-8
+    max-w-[90%] lg:max-w-xs
+  "
                             >
+
                                 <div className="text-[13px] tracking-[0.2em] text-black/40 uppercase mb-3">
                                     Featured
                                 </div>

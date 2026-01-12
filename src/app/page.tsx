@@ -13,7 +13,7 @@ import { Footer } from "./components/template/footer";
 
 export default function Home() {
   return (
-    <div className=" min-h-screen pt-24 lg:px-12 bg-white">
+    <div className=" min-h-screen pt-24 lg:px-12 bg-white relative overflow-hidden">
       <HeroSection />
       <FeaturedProducts/>
       <LifestyleSection/>

@@ -49,7 +49,7 @@ const CategorySection = () => {
                     </motion.div>
                 </div>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 lg:px-0 px-8">
 
                 {categories.map((category, index) => (
                     <motion.div

@@ -4,6 +4,18 @@ import { ArrowRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { ImageWithFallback } from "../molecules/fallback";
 
+function useIsMobile(breakpoint = 768) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < breakpoint);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, [breakpoint]);
+
+  return isMobile;
+}
 
 function Counter({
     target,
@@ -55,13 +67,28 @@ export function HeroSection() {
         once: true,
         margin: "-100px",
     });
+    const isMobile = useIsMobile();
+
 
 
     const data = [
-        { value: 47000, label: "CLIENTS", suffix: "K+" },
-        { value: 250, label: "PIECES", suffix: "+" },
-        { value: 98, label: "SATISFACTION", suffix: "%" },
-    ];
+  {
+    value: isMobile ? 12 : 47,
+    label: "CLIENTS",
+    suffix: "K+",
+  },
+  {
+    value: isMobile ? 120 : 250,
+    label: "PIECES",
+    suffix: "+",
+  },
+  {
+    value: isMobile ? 95 : 98,
+    label: "SATISFACTION",
+    suffix: "%",
+  },
+];
+
 
     const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
     const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
@@ -153,7 +180,7 @@ export function HeroSection() {
                         >
                             {data.map((item, i) => (
                                 <div key={i}>
-                                    <div className="text-[32px] tracking-[-0.02em] text-black mb-1">
+                                    <div className="lg:text-[32px] text-[24px] tracking-[-0.02em] text-black mb-1">
                                         <Counter
                                             target={item.value}
                                             suffix={item.suffix}

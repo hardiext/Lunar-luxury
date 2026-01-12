@@ -8,7 +8,7 @@ const testimonials = [
         role: "Creative Director",
     },
     {
-        quote: "NOIRE mengubah cara saya melihat luxury fashion. Timeless dan sophisticated.",
+        quote: "LUNAR mengubah cara saya melihat luxury fashion. Timeless dan sophisticated.",
         author: "Michael Rodriguez",
         role: "Entrepreneur",
     },

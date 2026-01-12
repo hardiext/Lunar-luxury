@@ -126,7 +126,7 @@ export function LifestyleSection() {
                 "Luxury bukan tentang harga, tapi tentang kualitas, perhatian terhadap detail, dan pengalaman yang Anda ciptakan."
               </p>
               <div className="text-[14px] text-black/60">
-                — Creative Director, NOIRE
+                — Creative Director, LUNAR
               </div>
             </motion.div>
           </div>

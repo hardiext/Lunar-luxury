@@ -26,7 +26,7 @@ export function InstagramSection() {
             Follow Us
           </span>
           <h2 className="text-[56px] lg:text-[72px] leading-[0.95] tracking-[-0.04em] text-black mb-8">
-            @noire
+            @lunar
           </h2>
           <p className="text-[18px] text-black/50 max-w-xl mx-auto mb-8">
             Join our community dan dapatkan daily inspiration dari latest collections dan behind-the-scenes moments.

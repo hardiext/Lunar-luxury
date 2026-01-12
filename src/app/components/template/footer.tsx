@@ -5,13 +5,13 @@ import { Instagram, Facebook, Twitter } from "lucide-react";
 export function Footer() {
   return (
     <footer className="bg-white border-t border-black/10">
-      <div className="max-w-350 mx-auto px-8 lg:px-16">
+      <div className="lg:max-w-350 mx-auto px-8 lg:px-0">
    
         <div className="py-20 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
         
           <div className="lg:col-span-4">
             <h3 className="text-[28px] tracking-[-0.03em] text-black mb-6">
-              NOIRE
+              LUNAR
             </h3>
             <p className="text-[15px] leading-[1.7] text-black/50 max-w-sm mb-8">
               Redefining luxury fashion dengan kurasi eksklusif yang
@@ -101,10 +101,10 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:hello@noire.com"
+                  href="mailto:hello@lunar.com"
                   className="text-[15px] text-black/60 hover:text-black transition-colors"
                 >
-                  hello@noire.com
+                  hello@lunar.com
                 </a>
               </li>
               <li>
@@ -122,7 +122,7 @@ export function Footer() {
         
         <div className="py-8 border-t border-black/10 flex flex-col lg:flex-row justify-between items-center gap-4">
           <p className="text-[13px] text-black/40">
-            © 2026 NOIRE. All rights reserved.
+            © 2026 LUNAR. All rights reserved.
           </p>
           <div className="flex items-center gap-8">
             <a

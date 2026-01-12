@@ -27,7 +27,7 @@ const TestimonialSection = () => {
     return (
 
         <section ref={containerRef} className="py-32 lg:py-48 bg-white">
-            <div className="max-w-450 mx-auto px-8 lg:px-0">
+            <div className="lg:max-w-450 mx-auto px-8 lg:px-0">
 
                 <div className="mb-24 lg:mb-32">
                     <motion.div

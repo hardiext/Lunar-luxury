@@ -19,7 +19,7 @@ const experiences = [
 export function ExperienceSection() {
   return (
     <section className="py-32 lg:py-48 bg-neutral-50">
-      <div className="max-w-450 mx-auto px-8 lg:px-0">
+      <div className="lg:max-w-450 mx-auto px-8 lg:px-0">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           
           <motion.div

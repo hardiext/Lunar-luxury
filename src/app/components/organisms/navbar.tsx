@@ -18,7 +18,7 @@ const Navbar = () => {
     return (
         <header className={`mx-auto z-30 fixed  w-full ${isScrolled ? 'bg-white/80 backdrop-blur-xl z-40  border-black/5' : 'bg-white'} transition-all`}>
             <nav className="px-12 py-8 grid lg:grid-cols-3 grid-cols-2  w-full">
-                <div className="text-2xl uppercase font-semibold text-start">LUNAR</div>
+                <div className="text-2xl uppercase font-semibold text-start text-black">LUNAR</div>
                 <ul className=" items-center space-x-10 justify-center md:flex hidden">
                     <li>Collection</li>
                     <li>Editorial</li>

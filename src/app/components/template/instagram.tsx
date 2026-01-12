@@ -13,7 +13,7 @@ const instagramImages = [
 export function InstagramSection() {
   return (
     <section className="py-32 lg:py-48 bg-neutral-50">
-      <div className="max-w-450 mx-auto px-8 lg:px-16">
+      <div className="max-w-450 mx-auto px-8 lg:px-0">
  
         <motion.div
           initial={{ opacity: 0, y: 30 }}

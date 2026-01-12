@@ -67,7 +67,7 @@ export function HeroSection() {
     const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
     return (
-        <section ref={containerRef} className="relative z-0 min-h-screen bg-white overflow-hidden">
+        <section ref={containerRef} className="relative lg:px-0 px-8 z-0 min-h-screen bg-white overflow-hidden">
             <div className="lg:max-w-450 mx-auto">
 
                 <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 min-h-[calc(100vh-96px)] items-center">
